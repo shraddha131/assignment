@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <script src='main.js'></script>
+
+  </head>
+<body>
+<div id="Wrapper">
+  <div class="box1">
+    <div class="box2"></div>
+    <label>Photo URL :</label><h4 id="Photo"></h4>
+  </div>
+
+  <div class="box1">
+    <label>Name : </label><h4 id="Name"></h4>
+    <label>Gender : </label><h4 id="Gender"></h4>
+    <label>Address : </label><h4 id="Address"></h4>
+    <label>Email : </label><h4 id="Email"></h4>
+  </div>
+
+  <div class="box1">
+    <label>Phone No. : </label><h4 id="Phone"></h4>
+    <label>Education : </label><h4 id="Education"></h4>
+    <label>Skills :</label><h4 id="Skills"></h4>
+    <label>Hobbies :</label><h4 id="Hobbies"></h4>
+  </div>
+</div>
+
+<script>
+var Dataa = JSON.parse(localStorage.getItem('Data'))
+console.log(Dataa);
+document.getElementById("Name").innerHTML = Dataa.Name;
+document.getElementById("Gender").innerHTML = Dataa.Gender;
+document.getElementById("Address").innerHTML = Dataa.Address;
+document.getElementById("Email").innerHTML = Dataa.Email;
+document.getElementById("Phone").innerHTML = Dataa.Phone;
+document.getElementById("Education").innerHTML = Dataa.Education;
+document.getElementById("Skills").innerHTML = Dataa.Skills;
+document.getElementById("Hobbies").innerHTML = Dataa.Hobbies;
+document.getElementById("Photo").innerHTML = Dataa.Photo;
+
+</script>
+
+
+
+</body>
+</html>

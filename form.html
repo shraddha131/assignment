@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Application form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="box">
+    <header><h2>Profile Information</h2></header>
+
+    <label id="Error"style="color:red; visibility: hidden;">Invalid</label>
+    
+    <form id="Frm" onsubmit="return validation()" action="profile.html">
+    
+    
+    <h4>Enter Your Full Name :<span>*</span></h4>
+    <input type="text" id="FName" placeholder="First Name" required>
+    
+    <h4>Select Your Gender :<span>*</span></h4>
+    <input type="radio" id="Gender" name="gender" value="male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="Gender" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="Gender" name="gender" value="other">
+    <label for="other">Other</label>
+
+    <h4>Enter Your Address :<span>*</span></h4>
+    <textarea id="Address" placeholder="Address" required></textarea>
+
+    <h4>Enter Your Email :<span>*</span></h4>
+    <input type="text" id="email" placeholder="Email" required>
+
+    <h4>Enter Your Phone Number :<span>*</span></h4>
+    <input type="text" id="PhnNo" placeholder="Phone Number" required>
+
+    <h4>Enter Your Educational Details :<span>*</span></h4>
+    <table id="EduTable">
+        <tr>
+          <th>Level</th>
+          <th>Year</th>
+          <th>Percentage</th>
+
+        </tr>
+        <tbody>
+        <tr id="row">
+          <td>
+            <select name="EduLevel" id="EduLevel" required>
+              <option value="">Select</option>
+              <option value="SSC">SSC</option>
+              <option value="HSC">HSC</option>
+              <option value="BE">BE</option>
+              <option value="BTech">BTech</option>
+              <option value="BCA">BCA</option>
+              <option value="MCA">MCA</option>
+            </select>
+        </td>
+          <td>
+            <select name="Year" id="Year" required>
+              <option value="">Select</option>
+              <option value="2021" >2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="Perc" min="1" max="100" required>
+          </td>
+
+          <td>
+            <div id="btn">Delete</div>
+          </td>
+
+        </tr>
+      </tbody>
+      </table>
+      <div id="btn" onclick="add()">Add</div>
+
+
+
+    <h4>Enter Your Skills :<span>*</span></h4>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Ratings</th>
+        </tr>
+        
+        <tr>
+          <td><input type="text" id="Skills" class="skills" required> </td>
+          <td><input type="number" id="Rating" min="1" max="10" required></td>
+          <td>
+            <div id="btn">Delete</div>
+          </td>
+
+        </tr>
+        
+    </table>
+    <div id="btn">Add</div>
+
+
+    <h4>Enter Your Hobbies :<span>*</span></h4>
+    <input type="text"  id="Hobbies" required>
+
+
+    <h4>Upload Photo :<span>*</span></h4>
+    <input type="text" id="Photo" placeholder="Enter URL Link to your online photo" required >
+    <br><br>
+
+    <button  id="btn" type="submit">Submit</h4><button id="btn" type="reset" onclick="removeLoc()">Reset</button>
+
+</form>
+</div>
+</body>
+</html>
